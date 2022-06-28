@@ -8,7 +8,6 @@ export function drawProtalChart(res, id, portalList, portalListKo){
     const options = {
         chart: {
             type: 'bar',
-            height: 300,
             stacked: true,
             toolbar: {
                 show: false
@@ -76,6 +75,7 @@ export function drawProtalChart(res, id, portalList, portalListKo){
             type="bar"
             series={rates} 
             options={options}
+            height={300}
         />
     );
 }
@@ -88,8 +88,6 @@ export function drawKeywordChart(response){
         
     const options = {
         chart: {
-            width:'100%',
-            height: 300,
             type: 'line',
             shadow: {
                 enabled: false,
@@ -188,6 +186,8 @@ export function drawKeywordChart(response){
             type="line"
             series={options['series']} 
             options={options}
+            width='100%'
+            height={300}
         />
     );
   }
@@ -207,8 +207,6 @@ export function drawTwtChart(data){
             series: [],
             chart: {
                 type: 'bar',
-                height: 85,
-                width: '100%',
                 stacked: true,
                 stackType: '100%',
                 toolbar:{
@@ -291,6 +289,8 @@ export function drawTwtChart(data){
                 type="bar"
                 series={options['series']} 
                 options={options}
+                height={85}
+                width='100%'
             />
         );
     // }
